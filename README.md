@@ -1,6 +1,6 @@
 ## Instructions
 
-Create simple React application displaying list of items. This application will consist of 3 components.
+Create simple React application displaying list of items. This application will consist of 3 components. These should be located in `components` directory.
 
 1.  Header - Simple function based component returning only `<h1>` tag
 
