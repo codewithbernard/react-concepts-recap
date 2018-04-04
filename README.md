@@ -1,37 +1,33 @@
 ## Instructions
 
-Create simple React application displaying list of items. This application will consist of 3 components. These should be located in `components` directory.
+Create simple React application displaying list of items. This application will consist of 1 component.
 
-1.  Header - Simple function based component returning only `<h1>` tag
+3.  List - This will be class based component. It will consists of 2 buttons. And 1 unordered list `<ul>`. They will be called `Button A` and `Button B`. The list will display multiple items. Each item will display text `"Hello"`. The number of items in list will be stored in component state. You can set initial value to `3`.
 
-2.  ListItem - This will be class based component. It will be just `<div>` element containing simple text. This text will be stored in component props. When you click on this component it will toggle dispalying of text in the `<div>`. Store the state of display option in component state.
+### Button A
 
-3.  List - This will be class based component. It will load items from `items.js` in `data` directory. Iterate through them and create ListItem from each element in the array.
+When `Button A` is clicked it will toggle backgorund color of List component. By default the color will be white. When the user clicks button it will turn to red. If the user clicks again it will go back to white.
 
-## Notes
+### Button B
 
-* For class based component you write `import React, {Component} from "react"`
+When `Button B` is clicked it will incerement number of items in the list by 1. E.G. IF the list shows 3 items and the `Button B` is clicked. It will show 4 items.
 
-* For function component you write `import React from "react"`
+### Hint
 
-* Render method
+You will need to store both properties(1 - to track if the backgorund color shoud be filled with red color, 2 - To track how many items should be displayed in the list) in component state.
+
+To initialize state with multiple items
 
 ```
-  render() {
-      return(
-          <div></div>
-      );
-  }
+state = {
+    propertyA: valueA,
+    propertyB: ValueB,
+    propertyC: valueC
+}
 ```
 
-* Inside render you don't want to call the function, you are just passing
+Then to setState of some property
 
-* If syntax - `if (condition) {}`
-
-* To set component state call `this.setState({})`
-
-* To get component state call `this.state`
-
-* When you have `export const myVariable = "something"` to import it use `import {myVariable} from "<file-name>"`
-
-* When you have `export default myVariable` to import it use `import myVariable from "<file-name>"`
+```
+this.setState({propertyA: newValueA})
+```
